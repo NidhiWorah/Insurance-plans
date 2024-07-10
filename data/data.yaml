@@ -1,0 +1,21 @@
+names:
+- aditya_birla_activ_health
+- aditya_birla_digishield_plans
+- bajaj_alliance_health_guard
+- bajaj_alliance_life_etouch
+- hdfc_click2protect_super
+- hdfc_ergo
+- icici_iprotect_smart
+- icici_lombard
+- max_life_smart_secure_plus
+- tata_aig
+nc: 10
+roboflow:
+  license: Private
+  project: poc-insurance-plans
+  url: https://app.roboflow.com/object-detection-ob1qs/poc-insurance-plans/3
+  version: 3
+  workspace: object-detection-ob1qs
+test: /content/drive/MyDrive/insurance_problems/data/test
+train: /content/drive/MyDrive/insurance_problems/data/train
+val: /content/drive/MyDrive/insurance_problems/data/valid
