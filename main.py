@@ -65,7 +65,7 @@ def get_health():
         os.rename(current_dir_path, new_dir_path)
 
     if request.method == 'POST':
-        ## for base64
+        ## -------------------- for base64 as input
         # data = request.get_json()
         # base64_string = data['data']
         # image_bytes = base64_to_image(base64_string)
@@ -80,6 +80,7 @@ def get_health():
         # img.save(os.path.join(uploads_dir, filename_1))
         # file_path = os.path.join(uploads_dir, filename_1)
 
+        ## --------------- for file as input
         file = request.files["file"]
 
         now = datetime.datetime.now()
@@ -94,6 +95,9 @@ def get_health():
 
         file.save(os.path.join(uploads_dir, filename))
         file_path = os.path.join(uploads_dir, filename)
+
+
+
         print(f'################ file path = {file_path}')
         
         result = os.system(f'python yolov5/detect.py --weights best.pt --img 416 --conf 0.1 --source {file_path} --save-csv --name insurance_plans')
