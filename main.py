@@ -139,5 +139,20 @@ def get_health():
 if __name__ == "__main__":
     app.run(debug=True)
 
+'''
+sample response : 
 
+{
+    "error": "NA",
+    "logo": "bajaj_alliance_life_etouch",
+    "recommendations": [
+        "aditya_birla_digishield_plans",
+        "hdfc_click2protect_super",
+        "icici_iprotect_smart",
+        "max_life_smart_secure_plus"
+    ]
+}
+
+
+'''
 
