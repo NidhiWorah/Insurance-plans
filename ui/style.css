@@ -1,0 +1,174 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  background-color: #d1e9f4;
+}
+
+.navbar {
+  background-color: #d1e9f4;
+  border-bottom: #d1e9f4;
+}
+
+.image-preview {
+  width: 100%;
+}
+
+.lexend-title {
+  font-family: "Lexend", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  font-size: 17px;
+  color: #5c5c5c !important;
+}
+
+h5 {
+  font-family: "Lexend", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  font-size: 17px;
+  color: #5c5c5c !important;
+}
+
+.upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.btn {
+  border: 2px solid gray;
+  color: gray;
+  background-color: white;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.btn i {
+  margin-right: 8px;
+}
+
+.upload-btn-wrapper input[type=file] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+
+.center {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+}
+
+.inner-block {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 80px);
+}
+
+.upload-block {
+  flex: 0 0 auto; /* This row will take the height based on its content */
+}
+
+.result-block {
+  flex: 1 1 auto; /* This row will take the remaining height */
+}
+
+.no-select {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  flex-direction: column;
+}
+
+.no-selected-document {
+  height: 50%;
+  width: 75%;
+  border-radius: 15px;
+}
+
+.no-select-text {
+  font-family: "Lexend", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  padding: 10px;
+  text-align: center;
+}
+
+.header-icon-left {
+  width: 10%;
+  color: #5c5c5c;
+  margin-right: 5px;
+}
+
+.header-icon-right {
+  width: 10%;
+  color: #5c5c5c;
+  margin-left: 5px;
+}
+
+.scanning-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: rgba(0, 123, 255, 0.8);
+  animation: scan 2s linear infinite;
+}
+
+.image-container {
+  position: relative;
+  margin-top: 20px;
+  max-width: 100%;
+  max-height: 400px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  display: none;
+}
+
+@keyframes scan {
+  from {
+      top: 0;
+  }
+  to {
+      top: 100%;
+  }
+}
+
+.plan_card {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.plan_image {
+  width: 100%;
+}
+
+#aditya_birla_digishield_plans, #aditya_birla_activ_health, #bajaj_alliance_life_etouch, #bajaj_alliance_health_guard, #hdfc_click2protect_super, #hdfc_ergo, #icici_iprotect_smart, #icici_lombard, #max_life_smart_secure_plus,#tata_aig {
+  display: none;
+}

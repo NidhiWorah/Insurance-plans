@@ -8,12 +8,15 @@ from werkzeug.utils import secure_filename
 import shutil
 import csv
 import datetime
+from flask_cors import CORS, cross_origin
 
 uploads_dir = 'uploads'
 attemps_dir = 'attempts'
 output_json = {}
 
 app = Flask(__name__)
+cors = CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
 
 term_plans = ['aditya_birla_digishield_plans','bajaj_alliance_life_etouch', 'hdfc_click2protect_super','icici_iprotect_smart', 'max_life_smart_secure_plus' ]
 
@@ -51,7 +54,7 @@ def get_health_plans(plan):
     return remaining_health_plans
 
 @app.route('/insurance', methods = ['POST'])
-
+@cross_origin()
 def get_health():
     if os.path.exists('yolov5/runs/detect/insurance_plans/'):
 
@@ -112,17 +115,22 @@ def get_health():
             print(lines_list[0][1])
 
             label = lines_list[0][1]
-
+            health_plan_bool = 0
+            term_plan_bool = 0
             if label in health_plans:
+                health_plan_bool = 1
                 remaining_plans = get_health_plans(label)
             elif label in term_plans:
-                remaining_plans = get_term_plans(label)
+              term_plan_bool = 1
+              remaining_plans = get_term_plans(label)
             else:
                 remaining_plans = ['aditya_birla_digishield_plans','bajaj_alliance_life_etouch', 'hdfc_click2protect_super','icici_iprotect_smart', 'max_life_smart_secure_plus', 'aditya_birla_activ_health' , 'bajaj_alliance_health_guard', 'hdfc_ergo' , 'icici_lombard', 'tata_aig']
 
             output_json['logo'] = label
             output_json['error'] = "NA"
             output_json['recommendations'] = remaining_plans
+            output_json['health_plan_bool'] = health_plan_bool
+            output_json['term_plan_bool'] = term_plan_bool
             
         except : 
             print("no detections were made")
