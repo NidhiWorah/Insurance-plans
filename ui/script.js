@@ -41,6 +41,9 @@ async function callData(event) {
     console.log('Success:', data);
     scanningLine.style.display = 'none';
     overlay.style.display = 'none';
+    document.getElementById(data.logo + '_detected').style.display = "flex";
+    document.getElementById('hr_tag').style.display = "block";
+    document.getElementById('detected').style.display = "flex";
     if (data.term_plan_bool == 1) {
       let index = term_plans.indexOf(data.logo);
 

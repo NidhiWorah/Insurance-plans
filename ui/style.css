@@ -23,6 +23,10 @@ body, html {
   color: #5c5c5c !important;
 }
 
+.detected {
+  display: none;
+}
+
 h5 {
   font-family: "Lexend", sans-serif;
   font-optical-sizing: auto;
@@ -131,7 +135,7 @@ h5 {
   position: relative;
   margin-top: 20px;
   max-width: 100%;
-  max-height: 400px;
+  max-height: 100%;
 }
 
 .overlay {
@@ -169,6 +173,14 @@ h5 {
   width: 100%;
 }
 
-#aditya_birla_digishield_plans, #aditya_birla_activ_health, #bajaj_alliance_life_etouch, #bajaj_alliance_health_guard, #hdfc_click2protect_super, #hdfc_ergo, #icici_iprotect_smart, #icici_lombard, #max_life_smart_secure_plus,#tata_aig {
+#aditya_birla_digishield_plans, #aditya_birla_activ_health, #bajaj_alliance_life_etouch, #bajaj_alliance_health_guard, #hdfc_click2protect_super, #hdfc_ergo, #icici_iprotect_smart, #icici_lombard, #max_life_smart_secure_plus,#tata_aig,
+#aditya_birla_digishield_plans_detected, #aditya_birla_activ_health_detected, #bajaj_alliance_life_etouch_detected, #bajaj_alliance_health_guard_detected, #hdfc_click2protect_super_detected, #hdfc_ergo_detected, #icici_iprotect_smart_detected, #icici_lombard_detected, #max_life_smart_secure_plus_detected,#tata_aig_detected
+{
+  display: none;
+}
+
+.hr_tag {
+  height: 2px;
+  background-color: #979797;
   display: none;
 }
