@@ -4,6 +4,12 @@ body, html {
   background-color: #d1e9f4;
 }
 
+.container-fluid {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
 .navbar {
   background-color: #d1e9f4;
   border-bottom: #d1e9f4;
@@ -21,6 +27,10 @@ body, html {
   text-align: center;
   font-size: 17px;
   color: #5c5c5c !important;
+}
+
+.main-title {
+  font-size: 30px !important;
 }
 
 .detected {
@@ -41,6 +51,7 @@ h5 {
   position: relative;
   overflow: hidden;
   display: inline-block;
+  align-items: center;
 }
 
 .btn {
@@ -82,13 +93,14 @@ h5 {
 }
 
 .result-block {
+  margin-top: 20px;
   flex: 1 1 auto; /* This row will take the remaining height */
 }
 
 .no-select {
   display: flex;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
   height: 100%;
   flex-direction: column;
 }
@@ -183,4 +195,48 @@ h5 {
   height: 2px;
   background-color: #979797;
   display: none;
+}
+
+.title {
+  margin-bottom: 30px;
+}
+
+#wrong_creds {
+  display: none;
+}
+
+.no_detected {
+  display: none;
+  justify-content: center;
+  flex-direction: column;
+}
+
+li {  
+  font-family: "Lexend", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 17px;
+  color: #5c5c5c !important;
+}
+
+h4 {
+  font-family: "Lexend", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 18px;
+  margin-top: 15px;
+  color: #5c5c5c !important;
+}
+
+.data-block {
+  margin-left: 10px;
+}
+
+.poweredby {
+  margin-top: 50px;
+  display: flex;
+    justify-content: center;
+    align-items: center;
 }
